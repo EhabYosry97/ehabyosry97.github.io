@@ -89,6 +89,16 @@
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             transition: transform 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        #projects img {
+            width: 100px;
+            height: 100px;
+            border-radius: 8px;
+            object-fit: cover;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
         #projects li:hover {
             transform: scale(1.02);
@@ -147,20 +157,32 @@
         <h2>Projects</h2>
         <ul>
             <li>
-                <h3>Smart Soil Measurement System</h3>
-                <p>A system that measures soil properties such as moisture, salinity, and nutrient levels, enabling efficient irrigation and soil management for agriculture.</p>
+                <img src="projects_photos/smart-soil-measurement.jpg" alt="Smart Soil Measurement System">
+                <div>
+                    <h3>Smart Soil Measurement System</h3>
+                    <p>A system that measures soil properties such as moisture, salinity, and nutrient levels, enabling efficient irrigation and soil management for agriculture.</p>
+                </div>
             </li>
             <li>
-                <h3>IoT OEE Device for Real-Time Production Monitoring and Efficiency</h3>
-                <p>An IoT device for tracking Overall Equipment Effectiveness (OEE) in real-time, improving production efficiency and reducing downtime in industrial settings.</p>
+                <img src="projects_photos/iot-oee-device.jpg" alt="IoT OEE Device">
+                <div>
+                    <h3>IoT OEE Device for Real-Time Production Monitoring and Efficiency</h3>
+                    <p>An IoT device for tracking Overall Equipment Effectiveness (OEE) in real-time, improving production efficiency and reducing downtime in industrial settings.</p>
+                </div>
             </li>
             <li>
-                <h3>Smart Industrial Vibration Sensor</h3>
-                <p>Designed to monitor machinery health through vibration analysis, this sensor provides early warning of potential equipment failures.</p>
+                <img src="projects_photos/industrial-vibration-sensor.jpg" alt="Industrial Vibration Sensor">
+                <div>
+                    <h3>Smart Industrial Vibration Sensor</h3>
+                    <p>Designed to monitor machinery health through vibration analysis, this sensor provides early warning of potential equipment failures.</p>
+                </div>
             </li>
             <li>
-                <h3>Industrial IoT System for OEE Monitoring</h3>
-                <p>A comprehensive system that integrates IoT devices and software to monitor and optimize industrial performance metrics like OEE.</p>
+                <img src="projects_photos/industrial-iot-oee.jpg" alt="Industrial IoT System for OEE Monitoring">
+                <div>
+                    <h3>Industrial IoT System for OEE Monitoring</h3>
+                    <p>A comprehensive system that integrates IoT devices and software to monitor and optimize industrial performance metrics like OEE.</p>
+                </div>
             </li>
         </ul>
     </section>
