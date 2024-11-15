@@ -118,8 +118,6 @@ footer {
     background-color: #03dac6;
 }
 
-
-
 /* CV Download Section */
 #cv-download {
     padding: 2rem 1rem; /* Padding for consistency with other sections */
@@ -151,6 +149,7 @@ footer {
 #cv-download .btn:hover {
     background-color: #03dac6;
 }
+
 /* Contact Section */
 #contact {
     padding: 2rem 1rem;
@@ -189,15 +188,18 @@ footer {
     display: flex;
     justify-content: center; /* Centers the icons horizontally */
     margin-top: 2rem;
+    gap: 1rem; /* Add spacing between icons */
+    flex-wrap: wrap; /* Allow icons to wrap if necessary */
 }
 
 #contact .contact-icons a {
-    margin: 0 2rem; /* Adds space between the icons */
+    display: inline-block; /* Ensure the icons are inline-block */
+    margin: 0 1rem; /* Margin to control space around icons */
 }
 
 #contact .contact-icons img {
-    width: 32px;
-    height: 32px;
+    width: 40px; /* Size of icons */
+    height: 40px;
     transition: transform 0.3s;
 }
 
