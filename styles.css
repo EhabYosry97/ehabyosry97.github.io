@@ -166,43 +166,20 @@ footer {
     margin-bottom: 1rem;
 }
 
-/* Contact Paragraph */
-#contact p {
-    font-size: 1.2rem;
-    color: #e0e0e0;
-    margin: 0.5rem 0;
-}
-
-/* Links */
-#contact a {
-    color: #ffffff;
-    text-decoration: none;
-}
-
-#contact a:hover {
-    color: #03dac6;
-}
-
-/* Icons in the Contact Section */
-#contact .contact-icons {
+/* Contact Section Icons */
+.contact-icons {
     display: flex;
-    justify-content: center; /* Centers the icons horizontally */
-    margin-top: 2rem;
-    gap: 1rem; /* Add spacing between icons */
-    flex-wrap: wrap; /* Allow icons to wrap if necessary */
+    justify-content: center; /* Centers icons */
+    align-items: center; /* Aligns icons vertically */
+    gap: 2rem; /* Adds spacing between icons */
 }
 
-#contact .contact-icons a {
-    display: inline-block; /* Ensure the icons are inline-block */
-    margin: 0 1rem; /* Margin to control space around icons */
-}
-
-#contact .contact-icons img {
-    width: 40px; /* Size of icons */
+.contact-icons a img {
+    width: 40px; /* Ensures consistent size for icons */
     height: 40px;
-    transition: transform 0.3s;
+    transition: transform 0.3s ease; /* Smooth hover effect */
 }
 
-#contact .contact-icons img:hover {
-    transform: scale(1.1); /* Slight scale effect on hover */
+.contact-icons a img:hover {
+    transform: scale(1.2); /* Enlarges icon slightly on hover */
 }
