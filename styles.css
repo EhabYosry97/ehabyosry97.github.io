@@ -94,7 +94,7 @@ section {
 
 section h2 {
     color: #ffffff;
-    border-bottom: 2px solid #03dac6;
+    border-bottom: 2px solid #4d8ef0;
     padding-bottom: 0.5rem;
     margin-bottom: 1rem;
     font-size: 1.8rem;
@@ -141,7 +141,19 @@ section p, section ul {
     object-fit: cover;
     border-radius: 8px;
 }
+.project-heading {
+    font-size: 3rem;
+    color: #ffffff; /* Customize color */
+    letter-spacing: 1px;
+    font-weight: bold;
+    text-align: center;
+    padding: 5px;             /* Add padding around the text */
+    margin-bottom: 40px;  /* Add space between the heading and the bottom */
+    border-bottom: 1px solid #868c8b;  /* Small line at the bottom */
 
+
+
+}
 #projects h3 {
     color: #bb86fc;
     font-size: 1.6rem;
