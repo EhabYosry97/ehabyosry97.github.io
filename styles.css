@@ -226,7 +226,7 @@ html {
 #project-images .image-gallery img {
     width: 100%;
     max-width: 900px;
-    height: 350px;
+    height: 650px;
     object-fit: cover;
     display: block;
     margin: 0 auto;
