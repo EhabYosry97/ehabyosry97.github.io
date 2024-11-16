@@ -4,16 +4,27 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     font-family: Arial, sans-serif;
     background-color: #121212;
     color: #e0e0e0;
     line-height: 1.6;
+    opacity: 0;
+    animation: bodyFadeIn 1.5s forwards; /* Fade in effect when the page loads */
 }
+
+@keyframes bodyFadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
 a {
     color: #bb86fc;
     text-decoration: none;
 }
+
 a:hover {
     color: #03dac6;
 }
@@ -24,6 +35,7 @@ header {
     padding: 2rem 0;
     border-bottom: 1px solid #333;
 }
+
 header img {
     width: 150px;
     height: 150px;
@@ -31,14 +43,28 @@ header img {
     margin-bottom: 1rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
+
 header h1 {
     font-size: 2.5rem;
     color: #ffffff;
+    opacity: 0;
+    transform: translateX(-50px);
+    animation: slideIn 1s forwards;
 }
+
 header p {
     font-size: 1.2rem;
     color: #bbb;
 }
+
+/* Slide in effect for header text */
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 nav ul {
     list-style: none;
     display: flex;
@@ -46,6 +72,7 @@ nav ul {
     gap: 1.5rem;
     margin-top: 1rem;
 }
+
 nav ul li {
     display: inline;
 }
@@ -55,7 +82,16 @@ section {
     padding: 2rem 1rem;
     max-width: 800px;
     margin: 2rem auto;
+    opacity: 0;
+    animation: fadeInSection 1s forwards;
 }
+
+@keyframes fadeInSection {
+    to {
+        opacity: 1;
+    }
+}
+
 section h2 {
     color: #ffffff;
     border-bottom: 2px solid #03dac6;
@@ -63,6 +99,7 @@ section h2 {
     margin-bottom: 1rem;
     font-size: 1.8rem;
 }
+
 section p, section ul {
     font-size: 1.1rem;
     color: #e0e0e0;
@@ -75,111 +112,202 @@ section p, section ul {
     flex-direction: column;
     gap: 1rem;
 }
+
 #projects li {
+    display: flex;
+    align-items: center;
     background-color: #1e1e1e;
     padding: 1.5rem;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
+
 #projects li:hover {
-    transform: scale(1.02);
+    transform: scale(1.05); /* Slight zoom effect on hover */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
+
+#projects li a {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    width: 100%;
+}
+
+#projects img.thumbnail {
+    width: 120px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
 #projects h3 {
     color: #bb86fc;
-    font-size: 1.4rem;
-}
-#projects img {
-    width: 100%;
-    border-radius: 8px;
+    font-size: 1.6rem;
     margin-bottom: 1rem;
+    flex-grow: 1;
+}
+
+#projects p {
+    font-size: 1.1rem;
+    color: #e0e0e0;
+}
+
+/* Button Styling */
+.btn {
+    background-color: #03dac6;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    color: #121212;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s; /* Added smooth scale effect */
+}
+
+.btn:hover {
+    background-color: #bb86fc;
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+/* Contact Icons Styling */
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.contact-icons a img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s;
+}
+
+.contact-icons a img:hover {
+    transform: scale(1.1);
 }
 
 /* Footer Styling */
 footer {
     text-align: center;
-    padding: 1rem;
-    border-top: 1px solid #333;
-    color: #aaa;
+    padding: 1.5rem;
+    background-color: #1e1e1e;
+    color: #bbb;
 }
 
-/* Button Styling */
-.btn {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    margin-top: 1rem;
-    background-color: #bb86fc;
-    color: #121212;
-    border-radius: 4px;
-    transition: background-color 0.3s;
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
 }
-.btn:hover {
-    background-color: #03dac6;
+
+/* Resize the Smart Soil Project Page Images to Same Size */
+#project-overview img {
+    width: 100%;
+    max-width: 900px;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Gallery of Images */
+#project-images .image-gallery img {
+    width: 100%;
+    max-width: 900px;
+    height: 350px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+}
+
+#project-images .image-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+#project-images .image-gallery img {
+    transition: transform 0.3s ease;
+}
+
+#project-images .image-gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* Thumbnail Styling for Project Images */
+.thumbnail {
+    width: 250px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Link Styling */
+a {
+    color: #2196F3;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #8BC34A;
+}
+
+/* Heading Styling for Project Titles */
+#projects h3 {
+    color: #65a8e3;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+#projects h3:hover {
+    color: #03dac6;
 }
 
 /* CV Download Section */
 #cv-download {
-    padding: 2rem 1rem; /* Padding for consistency with other sections */
-    max-width: 800px;
-    margin: 2rem auto; /* Centers the section */
+    padding: 2rem 0;
+    text-align: center;
 }
 
-#cv-download h2 {
-    text-align: left; /* Aligns the section heading to the left */
-    color: #ffffff;  /* Optional: set text color for the heading */
-    font-size: 2rem; /* Optional: adjust font size */
-}
-
-#cv-download p {
-    text-align: center; /* Centers the button inside the <p> */
-    margin-top: 1rem;   /* Adds space above the button */
-}
-
+/* Button Styling for CV Download */
 #cv-download .btn {
-    display: inline-block;
-    padding: 0.8rem 2rem;
-    font-size: 1.2rem;
-    background-color: #bb86fc;
-    color: #121212;
-    border-radius: 4px;
-    transition: background-color 0.3s;
+    background-color: #4a93d7; 
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+    display: block;
+    width: fit-content;
+    margin: 20px auto 0;
 }
 
 #cv-download .btn:hover {
-    background-color: #03dac6;
+    background-color: #55d760; 
+    transform: scale(1.05); /* Slight zoom effect */
 }
 
-/* Contact Section */
-#contact {
-    padding: 2rem 1rem;
-    max-width: 800px;
-    margin: 2rem auto;
-    text-align: center; /* Centers the heading and other text */
+/* Smooth motion for the job title */
+.motion-text {
+    display: inline-block;
+    animation: moveText 3s ease-in-out forwards; /* Controls the speed, easing, and non-repeating animation */
 }
 
-/* Heading */
-#contact h2 {
-    font-size: 2rem;
-    color: #ffffff;
-    text-align: left; /* Left aligns the heading */
-    margin-bottom: 1rem;
-}
-
-/* Contact Section Icons */
-.contact-icons {
-    display: flex;
-    justify-content: center; /* Centers icons */
-    align-items: center; /* Aligns icons vertically */
-    gap: 2rem; /* Adds spacing between icons */
-}
-
-.contact-icons a img {
-    width: 40px; /* Ensures consistent size for icons */
-    height: 40px;
-    transition: transform 0.3s ease; /* Smooth hover effect */
-}
-
-.contact-icons a img:hover {
-    transform: scale(1.2); /* Enlarges icon slightly on hover */
+@keyframes moveText {
+    0% {
+        transform: translateX(-100%); /* Start off-screen to the left */
+        opacity: 0;
+    }
+    50% {
+        transform: translateX(0); /* Move to the center */
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(0); /* Stay at the center */
+        opacity: 1;
+    }
 }
