@@ -174,7 +174,7 @@ section p, section ul {
 .contact-icons {
     display: flex;
     justify-content: center;
-    gap: 1rem;
+    gap: 4rem;
 }
 
 .contact-icons a img {
