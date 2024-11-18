@@ -398,3 +398,49 @@ a:hover {
         padding: 0.8rem 1.5rem;
     }
 }
+/* Header Image Animation */
+header img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    opacity: 0; /* Start with the image hidden */
+    transform: translateY(-30px); /* Start slightly above its position */
+    animation: zoomIn 3s forwards;
+}
+
+@keyframes zoomIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8); /* Start smaller */
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1); /* End at normal size */
+    }
+}
+
+/* Navigation Bar Styling */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+    opacity: 0; /* Initially hidden */
+    transform: translateX(-100%); /* Start off-screen (to the left) */
+    animation: slideInFromLeft 1s forwards; /* Apply the sliding animation */
+}
+
+/* Slide In from Left Animation */
+@keyframes slideInFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%); /* Start off-screen */
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0); /* End at its normal position */
+    }
+}
