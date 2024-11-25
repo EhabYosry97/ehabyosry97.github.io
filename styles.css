@@ -450,3 +450,145 @@ iframe {
     border-radius: 8px;
   }
   
+
+  /* Table Styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #2d3e50;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+td {
+  background-color: #f4f7fa;
+}
+
+tr:nth-child(even) td {
+  background-color: #e9eff2;
+}
+
+tr:hover td {
+  background-color: #d1e1f2;
+}
+
+/* Optional: Add a shadow around the table */
+table {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Optional: Style the table borders to make them smoother */
+td, th {
+  border-radius: 5px;
+}
+/* Table Styles for Dark Theme */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  th, td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #444;
+  }
+  
+  th {
+    background-color: #333;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  td {
+    background-color: #2c2f38;
+    color: #ddd;
+  }
+  
+  tr:nth-child(even) td {
+    background-color: #333;
+  }
+  
+  tr:hover td {
+    background-color: #444;
+    cursor: pointer;
+  }
+  
+  /* Optional: Add a shadow around the table */
+  table {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Optional: Style the table borders to make them smoother */
+  td, th {
+    border-radius: 5px;
+  }
+/* Key Features Styles */
+.features-list {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.features-list li {
+    background-color: #2c2f38;
+    color: #ddd;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #444;
+    transition: background-color 0.3s ease;
+}
+
+.features-list li strong {
+    color: #ffcc00; /* Accent color for the feature names */
+}
+
+.features-list li:hover {
+    background-color: #333;
+    cursor: pointer;
+}
+
+.features-list li b {
+    font-weight: bold;
+}
+
+.features-list li:last-child {
+    margin-bottom: 0; /* Removes margin from last item */
+}
+/* Technical Details Styling */
+#technical-details ul {
+    list-style: none;
+    padding: 0;
+}
+
+#technical-details li {
+    background-color: #2c2f38;
+    color: #ddd;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #444;
+}
+
+#technical-details li strong {
+    color: #ffcc00; /* Accent color for technical detail titles */
+}
+
+#technical-details li:last-child {
+    margin-bottom: 0; /* Removes margin from last item */
+}
+
+  
